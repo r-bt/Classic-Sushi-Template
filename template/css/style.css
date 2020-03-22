@@ -1,0 +1,162 @@
+.header > .logo{
+    background-color: #8f59a6;
+    width:350px;
+    height:200px;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+}
+
+.header > .logo:after{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left:0;
+    content: "";
+    transform: rotate(-55deg);
+    transform-origin: top right;
+}
+
+.header > .logo > img{
+    height:100%;
+    padding-left: 3%;
+}
+
+.header > .title-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top:15%;
+}
+
+#title{
+    background-color: #8f59a6;
+    color: white;
+    padding: 2%;
+    width:60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#character{
+    width:35%;
+    z-index: 1;
+}
+
+.header > .description{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 35px;
+    margin-top:2%;
+    font-weight: bold;
+}
+
+.section{
+    font-size: 20px;
+    margin-top:7%;
+    padding:3% 5% 3% 5%;
+    position: relative;
+}
+
+.section > ol{
+    margin-left: 5%;
+    list-style: none;
+    counter-reset: numList;
+    line-height: 30px;
+}
+
+.section > ol > li{
+    margin-top:3%;
+}
+
+.section > ol > li:before{
+    counter-increment: numList;
+    content: counter(numList);
+
+    width:35px;
+    height:35px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+
+    background: #ec6433;
+    color:white;
+
+    position: absolute;
+    left:8%;
+
+    text-align: center;
+    line-height: 35px;
+}
+
+.section > ol > li.emphasis:before{
+    counter-increment: emphasisList;
+    content: "";
+    background: none;
+    background-size: contain;
+    background-image: url("../assets/emphasis.png");
+    border-radius: 0px;
+}
+
+span.emphasis{
+    display: inline-block;
+    margin-left: 4%;
+}
+
+span.emphasis:before{
+    content: '';
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../assets/emphasis.png");
+    width:35px;
+    height:35px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+.section-emphasis{
+    background-color:#e9eaec;
+}
+
+.section-title{
+    background-color: #662184;
+    color:white;
+    padding: 2%;
+    font-size: 27px;
+    display: inline-block;
+    margin: 0 0 0 5%;
+    position: absolute;
+    top:-40px;
+}
+
+code.prettyprint{
+    margin-top:2%;
+    background-color: #e9eaec;
+    border-radius:5px;
+    border:none;
+    text-align: left;
+    padding:1.5%;
+    display: inline-block;
+}
+
+.kwd {
+    color:#0000ce;
+}
+
+#left-bar{
+    height:70%;
+    width: 3%;
+    position: absolute;
+    left:0;
+    top: 110%;
+    background-color: #8f59a6;
+}
+
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
