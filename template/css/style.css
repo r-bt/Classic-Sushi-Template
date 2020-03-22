@@ -65,7 +65,7 @@
 .section > ol{
     margin-left: 5%;
     list-style: none;
-    counter-reset: numList;
+    counter-reset: numList calc(var(--s, 1) - 1);
     line-height: 30px;
 }
 
@@ -92,7 +92,7 @@
     line-height: 35px;
 }
 
-.section > ol > li.emphasis:before{
+ol.emphasis > li:before{
     counter-increment: emphasisList;
     content: "";
     background: none;
@@ -118,7 +118,7 @@ span.emphasis:before{
     padding-left: 10px;
 }
 
-.section-emphasis{
+div.emphasis{
     background-color:#e9eaec;
 }
 
