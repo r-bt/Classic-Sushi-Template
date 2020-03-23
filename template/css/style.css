@@ -1,7 +1,7 @@
 .header > .logo{
     background-color: #8f59a6;
-    width:350px;
-    height:200px;
+    width:450px;
+    height:260px;
     overflow: hidden;
     position: absolute;
     top:0;
@@ -27,22 +27,23 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top:15%;
+    margin-top:12%;
 }
 
 #title{
     background-color: #8f59a6;
     color: white;
     padding: 2%;
-    width:60%;
+    width:65%;
     margin: 0 auto;
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 800;
 }
 
 #character{
-    width:35%;
+    width:40%;
     z-index: 1;
 }
 
@@ -50,16 +51,20 @@
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     text-align: center;
-    font-size: 35px;
+    font-size: 42px;
     margin-top:2%;
     font-weight: bold;
 }
 
 .section{
     font-size: 20px;
-    margin-top:7%;
+    margin-top:5%;
     padding:3% 5% 3% 5%;
     position: relative;
+}
+
+.section:last-of-type{
+    padding-bottom:0;
 }
 
 .section > ol{
@@ -67,10 +72,17 @@
     list-style: none;
     counter-reset: numList calc(var(--s, 1) - 1);
     line-height: 30px;
+    margin-bottom: 0;
 }
 
 .section > ol > li{
     margin-top:3%;
+}
+
+.section > ol > li > br{
+    display: block;
+    content: "";
+    margin-top: 1%;
 }
 
 .section > ol > li:before{
@@ -101,12 +113,11 @@ ol.emphasis > li:before{
     border-radius: 0px;
 }
 
-span.emphasis{
+p.emphasis{
     display: inline-block;
-    margin-left: 4%;
 }
 
-span.emphasis:before{
+p.emphasis:before{
     content: '';
     background-size: contain;
     background-repeat: no-repeat;
@@ -134,7 +145,7 @@ div.emphasis{
 }
 
 code.prettyprint{
-    margin-top:2%;
+    margin-top:0%;
     background-color: #e9eaec;
     border-radius:5px;
     border:none;
@@ -147,12 +158,25 @@ code.prettyprint{
     color:#0000ce;
 }
 
+pre{
+    margin-bottom: 0;
+}
+
 #left-bar{
-    height:70%;
-    width: 3%;
+    height:30%;
+    width: 2%;
     position: absolute;
     left:0;
-    top: 110%;
+    top: 40%;
+    background-color: #8f59a6;
+}
+
+#top-bar{
+    height:2%;
+    width: 100%;
+    position: absolute;
+    left:0;
+    top: 0;
     background-color: #8f59a6;
 }
 
